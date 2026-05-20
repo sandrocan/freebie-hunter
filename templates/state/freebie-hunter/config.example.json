@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "configured": false,
+  "source": {
+    "name": "",
+    "site": "kleinanzeigen",
+    "city": "",
+    "category": "Zu verschenken",
+    "searchUrl": "",
+    "pageUrls": [],
+    "maxPages": 3
+  }
+}

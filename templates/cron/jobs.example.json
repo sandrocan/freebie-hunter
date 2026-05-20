@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "freebie-hunter-collector",
+      "name": "Freebie Hunter - Collector",
+      "enabled": false,
+      "agentId": "main",
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/30 * * * *",
+        "tz": "Europe/Berlin"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Use the freebie-hunter skill as collector. Read state/freebie-hunter/config.json first. If not configured, ask for the city or a copied Kleinanzeigen 'Zu verschenken' search URL and stop. Otherwise fetch configured search pages with web_fetch, upsert real listings into state/freebie-hunter/listings.json, and regenerate reports/freebie-hunter-report.md.",
+        "toolsAllow": [
+          "web_fetch",
+          "read",
+          "write"
+        ]
+      },
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {}
+    },
+    {
+      "id": "freebie-hunter-evaluator",
+      "name": "Freebie Hunter - Evaluator",
+      "enabled": false,
+      "agentId": "main",
+      "schedule": {
+        "kind": "cron",
+        "expr": "5,35 * * * *",
+        "tz": "Europe/Berlin"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Use the freebie-hunter and freebie-evaluator skills. Evaluate only listings with needsEvaluation=true, preserve outreach data, update state/freebie-hunter/listings.json, and regenerate reports/freebie-hunter-report.md. End with active listings scored >= 40 sorted descending.",
+        "toolsAllow": [
+          "web_fetch",
+          "read",
+          "write",
+          "image"
+        ]
+      },
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {}
+    },
+    {
+      "id": "freebie-hunter-outreach",
+      "name": "Freebie Hunter - Outreach Drafts",
+      "enabled": false,
+      "agentId": "main",
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/10 * * * *",
+        "tz": "Europe/Berlin"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Use the freebie-hunter skill as outreach drafter. Process only manually selected queue entries from state/freebie-hunter/outreach-queue.json. Open listing pages with browser if available, draft a message, never click final send, then update listings and queue state.",
+        "toolsAllow": [
+          "browser",
+          "read",
+          "write"
+        ]
+      },
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {}
+    }
+  ]
+}

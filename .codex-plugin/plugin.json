@@ -1,0 +1,42 @@
+{
+  "name": "openclaw-freebie-hunter",
+  "version": "0.1.0",
+  "description": "Find, score, and human-review free Kleinanzeigen listings with OpenClaw.",
+  "author": {
+    "name": "Sandro",
+    "email": "[TODO: publisher email]",
+    "url": "[TODO: publisher URL]"
+  },
+  "homepage": "[TODO: documentation URL]",
+  "repository": "[TODO: repository URL]",
+  "license": "MIT",
+  "keywords": [
+    "openclaw",
+    "kleinanzeigen",
+    "classifieds",
+    "automation",
+    "resale"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "OpenClaw Freebie Hunter",
+    "shortDescription": "Monitor free listings and queue promising finds for review.",
+    "longDescription": "A safe OpenClaw workflow bundle for collecting free Kleinanzeigen listings, conservatively scoring resale potential, maintaining a shared JSON state, and preparing outreach only after explicit human selection.",
+    "developerName": "Sandro",
+    "category": "Productivity",
+    "capabilities": [
+      "Search",
+      "Analysis",
+      "Automation"
+    ],
+    "websiteURL": "[TODO: website URL]",
+    "privacyPolicyURL": "[TODO: privacy policy URL]",
+    "termsOfServiceURL": "[TODO: terms URL]",
+    "defaultPrompt": [
+      "Set up Freebie Hunter for my city.",
+      "Run the Freebie Hunter collector.",
+      "Review my current freebie shortlist."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

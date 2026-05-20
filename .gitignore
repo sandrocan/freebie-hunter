@@ -1,0 +1,29 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+*.bak.*
+
+# Dependency/cache folders if validation tooling is added later
+node_modules/
+.npm/
+.pnpm-store/
+
+# OpenClaw/Codex local runtime state
+identity/
+devices/
+credentials/
+telegram/
+browser/
+logs/
+memory/
+tasks/
+exec-approvals.json
+openclaw.json
+openclaw.json.last-good
