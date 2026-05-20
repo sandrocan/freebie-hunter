@@ -1,14 +1,14 @@
 {
-  "name": "openclaw-freebie-hunter",
+  "name": "@sandrocan/freebie-hunter",
   "version": "0.1.0",
   "description": "Find, score, and human-review free Kleinanzeigen listings with OpenClaw.",
   "author": {
     "name": "Sandro",
-    "email": "[TODO: publisher email]",
-    "url": "[TODO: publisher URL]"
+    "email": "",
+    "url": "https://github.com/sandrocan"
   },
-  "homepage": "[TODO: documentation URL]",
-  "repository": "[TODO: repository URL]",
+  "homepage": "https://github.com/sandrocan/freebie-hunter#readme",
+  "repository": "https://github.com/sandrocan/freebie-hunter",
   "license": "MIT",
   "keywords": [
     "openclaw",
@@ -29,9 +29,9 @@
       "Analysis",
       "Automation"
     ],
-    "websiteURL": "[TODO: website URL]",
-    "privacyPolicyURL": "[TODO: privacy policy URL]",
-    "termsOfServiceURL": "[TODO: terms URL]",
+    "websiteURL": "https://github.com/sandrocan/freebie-hunter",
+    "privacyPolicyURL": "https://github.com/sandrocan/freebie-hunter#privacy",
+    "termsOfServiceURL": "https://github.com/sandrocan/freebie-hunter#license",
     "defaultPrompt": [
       "Set up Freebie Hunter for my city.",
       "Run the Freebie Hunter collector.",
