@@ -1,0 +1,14 @@
+{
+  "id": "freebie-hunter",
+  "name": "OpenClaw Freebie Hunter",
+  "description": "Collect, score, and human-review free Kleinanzeigen listings with reusable OpenClaw skills.",
+  "version": "0.1.0",
+  "skills": [
+    "./skills"
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}
